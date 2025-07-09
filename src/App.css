@@ -1,38 +1,273 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#mainDiv {
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  padding: 50px 50px 50px 50px;
+  box-sizing: border-box;
+  overflow-x: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#formdiv {
+  position: relative;
+  background-color: whitesmoke;
+  height: 80vh;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+#fieldDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#inputfield {
+  margin-bottom: 2vh;
+  color: black;
+  font-weight: 600;
+  background-color: whitesmoke;
+  height: 40px;
+  width: 400px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 5px 5px 5px 8px;
+  outline: none;
+  border: 1px solid grey;
+  box-shadow: 4px 4px 10px grey;
+}
+
+#inputfieldDesciption {
+  margin-bottom: 2vh;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: whitesmoke;
+  height: 80px;
+  width: 400px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid grey;
+  box-shadow: 4px 4px 10px grey;
+  padding: 5px 5px 5px 8px;
+  resize: none;
+}
+#addButton {
+  line-height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  background-color: rgb(0, 166, 255);
+  cursor: pointer;
+}
+
+#mainDataDiv {
+  background-color: white;
+  height: fit-content;
+  width: 800px;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+#dataDiv {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 4px 4px 10px grey;
+}
+#infoRow {
+  display: flex;
+  justify-content: space-between;
+}
+#infoRow span {
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 50px;
+}
+#desc {
+  color: rgb(62, 60, 60);
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 50px;
+}
+
+#deleteButton {
+  background-color: red;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
   color: white;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px grey;
+  margin: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+#updateButton {
+  background-color: green;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px grey;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 800px) {
+  #mainDiv {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+  #formdiv {
+    position: relative;
+    background-color: whitesmoke;
+    height: 600px;
+    width: 98vw;
+    padding: 0px;
+    border-radius: 20px;
+  }
+
+  #fieldDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    width: 92%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #inputfield {
+    color: black;
+    font-weight: 600;
+    background-color: whitesmoke;
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px 5px 5px 8px;
+    outline: none;
+    border: 1px solid grey;
+    box-shadow: 4px 4px 10px grey;
+  }
+
+  #inputfieldDesciption {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    background-color: whitesmoke;
+    height: 80px;
+    width: 90%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+    box-shadow: 4px 4px 10px grey;
+    padding: 5px 5px 5px 8px;
+    resize: none;
+  }
+  #addButton {
+    line-height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    background-color: rgb(0, 166, 255);
+    cursor: pointer;
+  }
+
+  #mainDataDiv {
+    background-color: white;
+    height: fit-content;
+    width: 95vw;
+    border-radius: 20px;
+    overflow-y: auto;
+  }
+
+  #dataDiv {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 4px 4px 10px grey;
+  }
+  #infoRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #infoRow span {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  #desc {
+    color: rgb(62, 60, 60);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: start;
+    white-space: normal;
+    word-break: break-word;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #deleteButton {
+    background-color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px grey;
+    margin: 10px;
+  }
+  #updateButton {
+    background-color: green;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px grey;
   }
 }
